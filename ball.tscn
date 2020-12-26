@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=2]
+
+[sub_resource type="PhysicsMaterial" id=1]
+friction = 0.5
+bounce = 0.5
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 5.3192
+
+[node name="Ball" type="RigidBody2D"]
+position = Vector2( 463.137, 1.41632 )
+physics_material_override = SubResource( 1 )
+gravity_scale = 3.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 2 )
