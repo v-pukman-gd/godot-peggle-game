@@ -22,7 +22,7 @@ func follow_cursor(cursor_pos):
 	if c != 0:
 		var angle = -rad2deg(asin(x/c))
 		self.rotation_degrees = angle + 90 
-		print(angle)
+		#print(angle)
 		
 func _physics_process(delta):
 	if get_global_mouse_position().y >= Y_MIN:
