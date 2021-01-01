@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://game.gd" type="Script" id=1]
+[ext_resource path="res://cannon.tscn" type="PackedScene" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 517.747, 10 )
@@ -13,3 +14,6 @@ position = Vector2( 511.982, 589.349 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 shape = SubResource( 1 )
+
+[node name="Cannon" parent="." instance=ExtResource( 2 )]
+position = Vector2( 512, 64 )
