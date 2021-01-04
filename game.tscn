@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://game.gd" type="Script" id=1]
 [ext_resource path="res://cannon.tscn" type="PackedScene" id=2]
+[ext_resource path="res://peg.tscn" type="PackedScene" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 517.747, 10 )
@@ -37,3 +38,315 @@ shape = SubResource( 1 )
 
 [node name="Cannon" parent="." instance=ExtResource( 2 )]
 position = Vector2( 512, 64 )
+
+[node name="Line" type="Node2D" parent="."]
+position = Vector2( 80, 10 )
+
+[node name="Peg" parent="Line" instance=ExtResource( 3 )]
+position = Vector2( 200, 190 )
+
+[node name="Peg2" parent="Line" instance=ExtResource( 3 )]
+position = Vector2( 240, 190 )
+
+[node name="Peg3" parent="Line" instance=ExtResource( 3 )]
+position = Vector2( 280, 190 )
+
+[node name="Peg4" parent="Line" instance=ExtResource( 3 )]
+position = Vector2( 320, 190 )
+
+[node name="Peg5" parent="Line" instance=ExtResource( 3 )]
+position = Vector2( 360, 190 )
+
+[node name="Peg6" parent="Line" instance=ExtResource( 3 )]
+position = Vector2( 400, 190 )
+
+[node name="Peg7" parent="Line" instance=ExtResource( 3 )]
+position = Vector2( 440, 190 )
+
+[node name="Peg8" parent="Line" instance=ExtResource( 3 )]
+position = Vector2( 480, 190 )
+
+[node name="Peg9" parent="Line" instance=ExtResource( 3 )]
+position = Vector2( 520, 190 )
+
+[node name="Peg10" parent="Line" instance=ExtResource( 3 )]
+position = Vector2( 560, 190 )
+
+[node name="Peg11" parent="Line" instance=ExtResource( 3 )]
+position = Vector2( 600, 190 )
+
+[node name="Peg12" parent="Line" instance=ExtResource( 3 )]
+position = Vector2( 640, 190 )
+
+[node name="Line2" type="Node2D" parent="."]
+position = Vector2( 60, 50 )
+
+[node name="Peg" parent="Line2" instance=ExtResource( 3 )]
+position = Vector2( 200, 190 )
+
+[node name="Peg2" parent="Line2" instance=ExtResource( 3 )]
+position = Vector2( 240, 190 )
+
+[node name="Peg3" parent="Line2" instance=ExtResource( 3 )]
+position = Vector2( 280, 190 )
+
+[node name="Peg4" parent="Line2" instance=ExtResource( 3 )]
+position = Vector2( 320, 190 )
+
+[node name="Peg5" parent="Line2" instance=ExtResource( 3 )]
+position = Vector2( 360, 190 )
+
+[node name="Peg6" parent="Line2" instance=ExtResource( 3 )]
+position = Vector2( 400, 190 )
+
+[node name="Peg7" parent="Line2" instance=ExtResource( 3 )]
+position = Vector2( 440, 190 )
+
+[node name="Peg8" parent="Line2" instance=ExtResource( 3 )]
+position = Vector2( 480, 190 )
+
+[node name="Peg9" parent="Line2" instance=ExtResource( 3 )]
+position = Vector2( 520, 190 )
+
+[node name="Peg10" parent="Line2" instance=ExtResource( 3 )]
+position = Vector2( 560, 190 )
+
+[node name="Peg11" parent="Line2" instance=ExtResource( 3 )]
+position = Vector2( 600, 190 )
+
+[node name="Peg12" parent="Line2" instance=ExtResource( 3 )]
+position = Vector2( 640, 190 )
+
+[node name="Line3" type="Node2D" parent="."]
+position = Vector2( 80, 90 )
+
+[node name="Peg" parent="Line3" instance=ExtResource( 3 )]
+position = Vector2( 200, 190 )
+
+[node name="Peg2" parent="Line3" instance=ExtResource( 3 )]
+position = Vector2( 240, 190 )
+
+[node name="Peg3" parent="Line3" instance=ExtResource( 3 )]
+position = Vector2( 280, 190 )
+
+[node name="Peg4" parent="Line3" instance=ExtResource( 3 )]
+position = Vector2( 320, 190 )
+
+[node name="Peg5" parent="Line3" instance=ExtResource( 3 )]
+position = Vector2( 360, 190 )
+
+[node name="Peg6" parent="Line3" instance=ExtResource( 3 )]
+position = Vector2( 400, 190 )
+
+[node name="Peg7" parent="Line3" instance=ExtResource( 3 )]
+position = Vector2( 440, 190 )
+
+[node name="Peg8" parent="Line3" instance=ExtResource( 3 )]
+position = Vector2( 480, 190 )
+
+[node name="Peg9" parent="Line3" instance=ExtResource( 3 )]
+position = Vector2( 520, 190 )
+
+[node name="Peg10" parent="Line3" instance=ExtResource( 3 )]
+position = Vector2( 560, 190 )
+
+[node name="Peg11" parent="Line3" instance=ExtResource( 3 )]
+position = Vector2( 600, 190 )
+
+[node name="Peg12" parent="Line3" instance=ExtResource( 3 )]
+position = Vector2( 640, 190 )
+
+[node name="Line4" type="Node2D" parent="."]
+position = Vector2( 60, 130 )
+
+[node name="Peg" parent="Line4" instance=ExtResource( 3 )]
+position = Vector2( 200, 190 )
+
+[node name="Peg2" parent="Line4" instance=ExtResource( 3 )]
+position = Vector2( 240, 190 )
+
+[node name="Peg3" parent="Line4" instance=ExtResource( 3 )]
+position = Vector2( 280, 190 )
+
+[node name="Peg4" parent="Line4" instance=ExtResource( 3 )]
+position = Vector2( 320, 190 )
+
+[node name="Peg5" parent="Line4" instance=ExtResource( 3 )]
+position = Vector2( 360, 190 )
+
+[node name="Peg6" parent="Line4" instance=ExtResource( 3 )]
+position = Vector2( 400, 190 )
+
+[node name="Peg7" parent="Line4" instance=ExtResource( 3 )]
+position = Vector2( 440, 190 )
+
+[node name="Peg8" parent="Line4" instance=ExtResource( 3 )]
+position = Vector2( 480, 190 )
+
+[node name="Peg9" parent="Line4" instance=ExtResource( 3 )]
+position = Vector2( 520, 190 )
+
+[node name="Peg10" parent="Line4" instance=ExtResource( 3 )]
+position = Vector2( 560, 190 )
+
+[node name="Peg11" parent="Line4" instance=ExtResource( 3 )]
+position = Vector2( 600, 190 )
+
+[node name="Peg12" parent="Line4" instance=ExtResource( 3 )]
+position = Vector2( 640, 190 )
+
+[node name="Line5" type="Node2D" parent="."]
+position = Vector2( 80, 170 )
+
+[node name="Peg" parent="Line5" instance=ExtResource( 3 )]
+position = Vector2( 200, 190 )
+
+[node name="Peg2" parent="Line5" instance=ExtResource( 3 )]
+position = Vector2( 240, 190 )
+
+[node name="Peg3" parent="Line5" instance=ExtResource( 3 )]
+position = Vector2( 280, 190 )
+
+[node name="Peg4" parent="Line5" instance=ExtResource( 3 )]
+position = Vector2( 320, 190 )
+
+[node name="Peg5" parent="Line5" instance=ExtResource( 3 )]
+position = Vector2( 360, 190 )
+
+[node name="Peg6" parent="Line5" instance=ExtResource( 3 )]
+position = Vector2( 400, 190 )
+
+[node name="Peg7" parent="Line5" instance=ExtResource( 3 )]
+position = Vector2( 440, 190 )
+
+[node name="Peg8" parent="Line5" instance=ExtResource( 3 )]
+position = Vector2( 480, 190 )
+
+[node name="Peg9" parent="Line5" instance=ExtResource( 3 )]
+position = Vector2( 520, 190 )
+
+[node name="Peg10" parent="Line5" instance=ExtResource( 3 )]
+position = Vector2( 560, 190 )
+
+[node name="Peg11" parent="Line5" instance=ExtResource( 3 )]
+position = Vector2( 600, 190 )
+
+[node name="Peg12" parent="Line5" instance=ExtResource( 3 )]
+position = Vector2( 640, 190 )
+
+[node name="Line6" type="Node2D" parent="."]
+position = Vector2( 60, 210 )
+
+[node name="Peg" parent="Line6" instance=ExtResource( 3 )]
+position = Vector2( 200, 190 )
+
+[node name="Peg2" parent="Line6" instance=ExtResource( 3 )]
+position = Vector2( 240, 190 )
+
+[node name="Peg3" parent="Line6" instance=ExtResource( 3 )]
+position = Vector2( 280, 190 )
+
+[node name="Peg4" parent="Line6" instance=ExtResource( 3 )]
+position = Vector2( 320, 190 )
+
+[node name="Peg5" parent="Line6" instance=ExtResource( 3 )]
+position = Vector2( 360, 190 )
+
+[node name="Peg6" parent="Line6" instance=ExtResource( 3 )]
+position = Vector2( 400, 190 )
+
+[node name="Peg7" parent="Line6" instance=ExtResource( 3 )]
+position = Vector2( 440, 190 )
+
+[node name="Peg8" parent="Line6" instance=ExtResource( 3 )]
+position = Vector2( 480, 190 )
+
+[node name="Peg9" parent="Line6" instance=ExtResource( 3 )]
+position = Vector2( 520, 190 )
+
+[node name="Peg10" parent="Line6" instance=ExtResource( 3 )]
+position = Vector2( 560, 190 )
+
+[node name="Peg11" parent="Line6" instance=ExtResource( 3 )]
+position = Vector2( 600, 190 )
+
+[node name="Peg12" parent="Line6" instance=ExtResource( 3 )]
+position = Vector2( 640, 190 )
+
+[node name="Line7" type="Node2D" parent="."]
+position = Vector2( 80, 250 )
+
+[node name="Peg" parent="Line7" instance=ExtResource( 3 )]
+position = Vector2( 200, 190 )
+
+[node name="Peg2" parent="Line7" instance=ExtResource( 3 )]
+position = Vector2( 240, 190 )
+
+[node name="Peg3" parent="Line7" instance=ExtResource( 3 )]
+position = Vector2( 280, 190 )
+
+[node name="Peg4" parent="Line7" instance=ExtResource( 3 )]
+position = Vector2( 320, 190 )
+
+[node name="Peg5" parent="Line7" instance=ExtResource( 3 )]
+position = Vector2( 360, 190 )
+
+[node name="Peg6" parent="Line7" instance=ExtResource( 3 )]
+position = Vector2( 400, 190 )
+
+[node name="Peg7" parent="Line7" instance=ExtResource( 3 )]
+position = Vector2( 440, 190 )
+
+[node name="Peg8" parent="Line7" instance=ExtResource( 3 )]
+position = Vector2( 480, 190 )
+
+[node name="Peg9" parent="Line7" instance=ExtResource( 3 )]
+position = Vector2( 520, 190 )
+
+[node name="Peg10" parent="Line7" instance=ExtResource( 3 )]
+position = Vector2( 560, 190 )
+
+[node name="Peg11" parent="Line7" instance=ExtResource( 3 )]
+position = Vector2( 600, 190 )
+
+[node name="Peg12" parent="Line7" instance=ExtResource( 3 )]
+position = Vector2( 640, 190 )
+
+[node name="Line8" type="Node2D" parent="."]
+position = Vector2( 60, 290 )
+
+[node name="Peg" parent="Line8" instance=ExtResource( 3 )]
+position = Vector2( 200, 190 )
+
+[node name="Peg2" parent="Line8" instance=ExtResource( 3 )]
+position = Vector2( 240, 190 )
+
+[node name="Peg3" parent="Line8" instance=ExtResource( 3 )]
+position = Vector2( 280, 190 )
+
+[node name="Peg4" parent="Line8" instance=ExtResource( 3 )]
+position = Vector2( 320, 190 )
+
+[node name="Peg5" parent="Line8" instance=ExtResource( 3 )]
+position = Vector2( 360, 190 )
+
+[node name="Peg6" parent="Line8" instance=ExtResource( 3 )]
+position = Vector2( 400, 190 )
+
+[node name="Peg7" parent="Line8" instance=ExtResource( 3 )]
+position = Vector2( 440, 190 )
+
+[node name="Peg8" parent="Line8" instance=ExtResource( 3 )]
+position = Vector2( 480, 190 )
+
+[node name="Peg9" parent="Line8" instance=ExtResource( 3 )]
+position = Vector2( 520, 190 )
+
+[node name="Peg10" parent="Line8" instance=ExtResource( 3 )]
+position = Vector2( 560, 190 )
+
+[node name="Peg11" parent="Line8" instance=ExtResource( 3 )]
+position = Vector2( 600, 190 )
+
+[node name="Peg12" parent="Line8" instance=ExtResource( 3 )]
+position = Vector2( 640, 190 )
