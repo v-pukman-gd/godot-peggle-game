@@ -1,10 +1,6 @@
 extends RigidBody2D
 
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
+var hit_bottom = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -20,3 +16,5 @@ func _on_ball_body_entered(body):
 	print("hit:", body)
 	if body.is_in_group("peg"):
 		body.hit_by_ball()
+	elif body.is_in_group("bottom"):
+		self.hit_bottom = true

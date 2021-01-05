@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/peg.png-8ccb858a6943b49c27de9b301dee1b11.stex"
+path="res://.import/blue_peg_32.png-e31b0ac94932d0062d37146bcd90aa9d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://peg.png"
-dest_files=[ "res://.import/peg.png-8ccb858a6943b49c27de9b301dee1b11.stex" ]
+source_file="res://peg/blue_peg_32.png"
+dest_files=[ "res://.import/blue_peg_32.png-e31b0ac94932d0062d37146bcd90aa9d.stex" ]
 
 [params]
 
