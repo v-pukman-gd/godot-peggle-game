@@ -111,14 +111,14 @@ position = Vector2( 480, 190 )
 [node name="Peg9" parent="Line2" instance=ExtResource( 3 )]
 position = Vector2( 520, 190 )
 
-[node name="Peg10" parent="Line2" instance=ExtResource( 3 )]
-position = Vector2( 560, 190 )
-
 [node name="Peg11" parent="Line2" instance=ExtResource( 3 )]
 position = Vector2( 600, 190 )
 
 [node name="Peg12" parent="Line2" instance=ExtResource( 3 )]
 position = Vector2( 640, 190 )
+
+[node name="RedPeg" parent="Line2" instance=ExtResource( 4 )]
+position = Vector2( 560, 190 )
 
 [node name="Line3" type="Node2D" parent="."]
 position = Vector2( 84, 88 )
@@ -246,9 +246,6 @@ position = Vector2( 200, 190 )
 [node name="Peg2" parent="Line6" instance=ExtResource( 3 )]
 position = Vector2( 240, 190 )
 
-[node name="Peg3" parent="Line6" instance=ExtResource( 3 )]
-position = Vector2( 280, 190 )
-
 [node name="Peg4" parent="Line6" instance=ExtResource( 3 )]
 position = Vector2( 320, 190 )
 
@@ -275,6 +272,9 @@ position = Vector2( 600, 190 )
 
 [node name="Peg12" parent="Line6" instance=ExtResource( 3 )]
 position = Vector2( 640, 190 )
+
+[node name="RedPeg" parent="Line6" instance=ExtResource( 4 )]
+position = Vector2( 280, 190.4 )
 
 [node name="Line7" type="Node2D" parent="."]
 position = Vector2( 84, 248 )
@@ -312,7 +312,7 @@ position = Vector2( 560, 190 )
 [node name="Peg11" parent="Line7" instance=ExtResource( 3 )]
 position = Vector2( 600, 190 )
 
-[node name="Peg12" parent="Line7" instance=ExtResource( 3 )]
+[node name="RedPeg" parent="Line7" instance=ExtResource( 4 )]
 position = Vector2( 640, 190 )
 
 [node name="Line8" type="Node2D" parent="."]
@@ -356,3 +356,14 @@ position = Vector2( 640, 190 )
 
 [node name="ClearTimer" type="Timer" parent="."]
 wait_time = 0.1
+
+[node name="ScoreLabel" type="Label" parent="."]
+margin_left = 136.0
+margin_top = 32.0
+margin_right = 336.0
+margin_bottom = 62.0
+rect_min_size = Vector2( 200, 30 )
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}

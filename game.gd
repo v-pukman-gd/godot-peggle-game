@@ -4,6 +4,7 @@ extends Node2D
 var ball_scn = preload("res://ball.tscn")
 onready var cannon = $Cannon
 onready var clear_timer = $ClearTimer
+onready var score_label = $ScoreLabel
 
 const IMPULSE = 500
 
@@ -11,8 +12,12 @@ var can_shoot = true
 var balls = []
 var collected_pegs = []
 
+var total_score = 0
+var collected_pegs_score = 0
+
 func _ready():
 	clear_timer.connect("timeout", self, "on_clear_timeout")
+	update_score()
 	pass 
 	
 func _input(event):
@@ -25,6 +30,7 @@ func  spawn_ball(pos):
 	
 	print("spawn ball", pos)
 	can_shoot = false
+	collected_pegs_score = 0
 	
 	var ball = ball_scn.instance()
 	ball.position = cannon.get_node("Position2D").global_position
@@ -45,6 +51,7 @@ func _process(delta):
 			
 func on_peg_collected(peg):
 	collected_pegs.append(peg)
+	collected_pegs_score += peg.points
 	
 func on_clear_timeout():
 	var peg = collected_pegs.pop_front()
@@ -53,4 +60,9 @@ func on_clear_timeout():
 	else:
 		clear_timer.stop()
 		can_shoot = true
+		update_score()
 	
+func update_score():
+	total_score += collected_pegs_score
+	collected_pegs_score = 0
+	score_label.text = str(total_score)
