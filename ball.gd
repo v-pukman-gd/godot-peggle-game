@@ -13,7 +13,7 @@ func _ready():
 
 
 func _on_ball_body_entered(body):
-	print("hit:", body)
+	#print("hit:", body)
 	if body.is_in_group("peg"):
 		body.hit_by_ball()
 	elif body.is_in_group("bottom"):

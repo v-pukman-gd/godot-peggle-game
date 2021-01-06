@@ -1,5 +1,7 @@
 extends Node2D
 
+onready var shoot_position_node = $ShootPosition
+
 func _ready():
 	pass
 
@@ -11,12 +13,23 @@ func _process(delta):
 	pass
 	
 func _physics_process(delta):
-	if get_global_mouse_position().y >= self.position.y:
-		var d = self.global_position - get_global_mouse_position()
-		var offset = -PI
-		var r = d.angle() + offset
-		self.rotation = lerp_angle(self.rotation, r, 0.25)
+	#if get_global_mouse_position().y >= self.position.y:
+	var d = self.global_position - get_global_mouse_position()
+	var r = d.angle() - PI
 	
+	self.rotation = lerp_angle(self.rotation, r, 0.25)
+	
+	if self.rotation > PI:
+		self.rotation = PI
+	elif self.rotation < 0:
+		self.rotation = 0
+		
+
+func shoot_position():
+	return shoot_position_node.global_position
+
+#func _draw():
+#	draw_line(Vector2(0,0), Vector2(300, 0), Color.red)
 # Variant 1:
 #const Y_MIN = 100
 #func follow_cursor(cursor_pos):

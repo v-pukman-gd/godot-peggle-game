@@ -15,6 +15,8 @@ var collected_pegs = []
 var total_score = 0
 var collected_pegs_score = 0
 
+var ball_vel = Vector2()
+
 func _ready():
 	clear_timer.connect("timeout", self, "on_clear_timeout")
 	update_score()
@@ -24,6 +26,8 @@ func _input(event):
 	if (event.is_action_pressed("spawn")):
 		print(event.as_text())
 		spawn_ball(event.position)
+	#elif (event is InputEventMouseMotion):
+	#	update()
 		
 func  spawn_ball(pos):
 	if not can_shoot: return
@@ -33,22 +37,56 @@ func  spawn_ball(pos):
 	collected_pegs_score = 0
 	
 	var ball = ball_scn.instance()
-	ball.position = cannon.get_node("Position2D").global_position
+	ball.position = cannon.shoot_position()
 	
 	var y = sin(cannon.rotation) * IMPULSE
 	var x = cos(cannon.rotation) * IMPULSE		
 	
+	ball_vel = Vector2(x,y)
+	print("Vector2(x,y)", Vector2(x,y))
 	ball.apply_central_impulse(Vector2(x,y))
+	
 	add_child(ball)
 	balls.append(ball)
 
 func _process(delta):
 	for b in balls:
+		print("ball.linear_velocity()", b.linear_velocity)
 		if b.hit_bottom:
 			b.queue_free()
 			balls.erase(b)
 			clear_timer.start()
 			
+	update()
+			
+func _draw():		
+	var y = sin(cannon.rotation)
+	var x = cos(cannon.rotation)	
+	
+	var dir = Vector2(x,y).normalized()
+		
+	print("dir:", dir)
+	
+	var velocity = dir * IMPULSE
+	var start_point = cannon.shoot_position()
+	var g = 9.8/3.0
+	
+	var step = Vector2(start_point.x, start_point.y)
+	var gran = 100.0
+	var arr = []
+	arr.append(Vector2(step.x, step.y))
+	for i in range(int(gran)):
+		velocity.y += g
+		step.x += velocity.x / gran
+		step.y += velocity.y / gran
+		
+		arr.append(Vector2(step.x, step.y))
+		
+	for p in arr:
+		draw_circle(p, 6, Color.greenyellow)
+		#draw_rect(Rect2(p, Vector2(5,5)), Color.greenyellow)
+	#draw_multiline(PoolVector2Array(arr), Color.greenyellow)
+		
 func on_peg_collected(peg):
 	collected_pegs.append(peg)
 	collected_pegs_score += peg.points
