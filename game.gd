@@ -18,6 +18,7 @@ var collected_pegs_score = 0
 var ball_vel = Vector2()
 
 func _ready():
+	#Engine.time_scale = 0.1
 	clear_timer.connect("timeout", self, "on_clear_timeout")
 	update_score()
 	pass 
@@ -30,7 +31,7 @@ func _input(event):
 	#	update()
 		
 func  spawn_ball(pos):
-	if not can_shoot: return
+	#if not can_shoot: return
 	
 	print("spawn ball", pos)
 	can_shoot = false
@@ -59,31 +60,36 @@ func _process(delta):
 			
 	update()
 			
-func _draw():		
+func _draw():
 	var y = sin(cannon.rotation)
-	var x = cos(cannon.rotation)	
+	var x = cos(cannon.rotation)
 	
 	var dir = Vector2(x,y).normalized()
-		
+	
 	print("dir:", dir)
 	
 	var velocity = dir * IMPULSE
 	var start_point = cannon.shoot_position()
-	var g = 9.8/3.0
+	var g = 98
 	
 	var step = Vector2(start_point.x, start_point.y)
-	var gran = 100.0
+	var gran = 130.0
 	var arr = []
-	arr.append(Vector2(step.x, step.y))
+	#arr.append(Vector2(step.x, step.y))
 	for i in range(int(gran)):
-		velocity.y += g
-		step.x += velocity.x / gran
-		step.y += velocity.y / gran
+		#velocity.y += g
+		#step.x += velocity.x / gran
+		#step.y += velocity.y / gran
+		#arr.append(Vector2(step.x, step.y))
+		print(i)
+		var t = float(i)/float(gran)
+		var xx = start_point.x + velocity.x*t
+		var yy = start_point.y + velocity.y*t + (g*3.0*t*t)/2.0
 		
-		arr.append(Vector2(step.x, step.y))
+		arr.append(Vector2(xx, yy))
 		
 	for p in arr:
-		draw_circle(p, 6, Color.greenyellow)
+		draw_circle(p, 1, Color.greenyellow)
 		#draw_rect(Rect2(p, Vector2(5,5)), Color.greenyellow)
 	#draw_multiline(PoolVector2Array(arr), Color.greenyellow)
 		
